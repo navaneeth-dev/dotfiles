@@ -64,4 +64,4 @@ fi
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
-stow */ --target ~
+stow */ --target ~ --adopt
