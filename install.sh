@@ -38,13 +38,17 @@ curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install
 
-curl -s https://api.github.com/repos/nelsonenzo/tmux-appimage/releases/latest \
-| grep "browser_download_url.*appimage" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi - \
-&& chmod +x tmux.appimage
-mv tmux.appimage /usr/local/bin/tmux
+# Tmux
+if [ ! -f /usr/local/bin/tmux ]
+then
+  wget https://github.com/tmux/tmux/releases/latest/download/tmux-3.3a.tar.gz
+  # runtime dep
+  sudo apt-get install libevent ncurses
+  # build dep
+  sudo apt-get install libevent-dev ncurses-dev build-essential bison pkg-config
+  tar -zxf tmux-*.tar.gz
+  cd tmux-*/ && ./configure && make && sudo make install
+fi
 
 if [ ! -f /usr/bin/nvim ]
 then
