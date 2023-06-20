@@ -1,3 +1,5 @@
+set -x SHELL /usr/bin/fish
+
 starship init fish | source
 zoxide init fish | source
 
