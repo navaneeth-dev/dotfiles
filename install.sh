@@ -6,4 +6,26 @@ sudo apt-get upgrade -y
 sudo apt-get install -y fish
 sudo chsh "$(id -un)" --shell "/usr/bin/fish"
 
+sudo apt-get install -y bat
+sudo apt-get install -y unzip
+sudo apt-get install -y wget
 sudo apt-get install -y tmux
+
+sudo apt-get install -y stow
+
+# exa
+if [ ! -f /usr/local/bin/exa ]
+then
+  wget "https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-musl-v0.10.1.zip"
+  rm -rf bin completions man
+  unzip exa-linux-x86_64-musl-v0.10.1.zip
+  # sudo mv man/* /usr/local/share/man/man1/
+  rm -rf man
+  sudo mv bin/exa /usr/local/bin/exa
+  rm -rf bin
+  mv completions/exa.fish ~/.config/fish/completions/exa.fish
+  rm -rf completions
+  rm exa-linux-x86_64-musl-v0.10.1.zip
+fi
+
+#stow --target=~/
