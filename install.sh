@@ -34,6 +34,8 @@ chmod +x ./starship.sh
 ./starship.sh -f
 rm ./starship.sh
 
+starship preset pure-preset -o ~/.config/starship.toml
+
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
