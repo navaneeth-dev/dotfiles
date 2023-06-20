@@ -33,4 +33,6 @@ chmod +x ./starship.sh
 ./starship.sh -f
 rm ./starship.sh
 
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
 stow */ --target ~
