@@ -48,6 +48,8 @@ then
   sudo apt-get install libevent-dev ncurses-dev build-essential bison pkg-config
   tar -zxf tmux-*.tar.gz
   cd tmux-*/ && ./configure && make && sudo make install
+  rm tmux-*.tar.gz
+  rm -rf tmux-*
 fi
 
 if [ ! -f /usr/bin/nvim ]
