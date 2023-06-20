@@ -28,4 +28,9 @@ then
   rm exa-linux-x86_64-musl-v0.10.1.zip
 fi
 
+wget https://starship.rs/install.sh -O starship.sh
+chmod +x ./starship.sh
+./starship.sh -f
+rm ./starship.sh
+
 #stow --target=~/
