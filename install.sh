@@ -33,4 +33,4 @@ chmod +x ./starship.sh
 ./starship.sh -f
 rm ./starship.sh
 
-#stow --target=~/
+stow */ --target ~
