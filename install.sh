@@ -9,7 +9,6 @@ sudo chsh "$(id -un)" --shell "/usr/bin/fish"
 sudo apt-get install -y bat
 sudo apt-get install -y unzip
 sudo apt-get install -y wget
-sudo apt-get install -y tmux
 sudo apt-get install -y ripgrep
 
 sudo apt-get install -y stow
@@ -34,13 +33,18 @@ chmod +x ./starship.sh
 ./starship.sh -f
 rm ./starship.sh
 
-starship preset pure-preset -o ~/.config/starship.toml
-
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install
 
+curl -s https://api.github.com/repos/nelsonenzo/tmux-appimage/releases/latest \
+| grep "browser_download_url.*appimage" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi - \
+&& chmod +x tmux.appimage
+mv tmux.appimage /usr/local/bin/tmux
 
 if [ ! -f /usr/bin/nvim ]
 then
