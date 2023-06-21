@@ -26,7 +26,7 @@ local plugins = {
 				"html-lsp",
 				"prettier",
 				"stylua",
-        "tailwindcss",
+        "tailwindcss-language-server",
         "typescript-language-server"
 			},
 		},
