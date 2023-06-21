@@ -10,6 +10,7 @@ sudo apt-get install -y bat
 sudo apt-get install -y unzip
 sudo apt-get install -y wget
 sudo apt-get install -y ripgrep
+sudo apt-get install -y shellcheck
 
 sudo apt-get install -y stow
 
