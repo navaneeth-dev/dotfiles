@@ -49,7 +49,7 @@ then
   sudo apt-get install -y libevent-dev ncurses-dev build-essential bison pkg-config
   tar -zxf tmux-*.tar.gz
   cd tmux-*/ && ./configure && make && sudo make install
-  pwd
+  cd ..
   rm tmux-*.tar.gz
   rm -rf tmux-*
 fi
