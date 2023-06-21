@@ -39,6 +39,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install
 
 # Tmux
+echo "=== INSTALLING TMUX ==="
 if [ ! -f /usr/local/bin/tmux ]
 then
   wget https://github.com/tmux/tmux/releases/latest/download/tmux-3.3a.tar.gz
@@ -48,10 +49,12 @@ then
   sudo apt-get install -y libevent-dev ncurses-dev build-essential bison pkg-config
   tar -zxf tmux-*.tar.gz
   cd tmux-*/ && ./configure && make && sudo make install
+  pwd
   rm tmux-*.tar.gz
   rm -rf tmux-*
 fi
 
+echo "=== INSTALLING NEOVIM ==="
 if [ ! -f /usr/bin/nvim ]
 then
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -64,4 +67,4 @@ fi
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
-stow */ --target ~ --adopt
+stow -v */ --target ~ --adopt
