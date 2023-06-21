@@ -1,5 +1,9 @@
 local plugins = {
 	{
+		"christoomey/vim-tmux-navigator",
+		lazy = false,
+	},
+	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
 			ensure_installed = { "typescript", "lua", "prisma", "svelte", "tsx", "json", "vim", "html", "css" },
@@ -26,8 +30,8 @@ local plugins = {
 				"html-lsp",
 				"prettier",
 				"stylua",
-        "tailwindcss",
-        "typescript-language-server"
+				"tailwindcss-language-server",
+				"typescript-language-server",
 			},
 		},
 	},
