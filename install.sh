@@ -43,9 +43,9 @@ if [ ! -f /usr/local/bin/tmux ]
 then
   wget https://github.com/tmux/tmux/releases/latest/download/tmux-3.3a.tar.gz
   # runtime dep
-  sudo apt-get install libevent ncurses
+  sudo apt-get install -y libevent ncurses
   # build dep
-  sudo apt-get install libevent-dev ncurses-dev build-essential bison pkg-config
+  sudo apt-get install -y libevent-dev ncurses-dev build-essential bison pkg-config
   tar -zxf tmux-*.tar.gz
   cd tmux-*/ && ./configure && make && sudo make install
   rm tmux-*.tar.gz
