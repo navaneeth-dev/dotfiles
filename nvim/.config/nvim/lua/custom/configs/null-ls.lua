@@ -10,6 +10,7 @@ local sources = {
 	formatting.prismals,
 
 	lint.shellcheck,
+	lint.primals,
 }
 
 null_ls.setup({
