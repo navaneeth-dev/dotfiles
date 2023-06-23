@@ -7,8 +7,10 @@ local lint = null_ls.builtins.diagnostics
 local sources = {
 	formatting.prettier,
 	formatting.stylua,
+	formatting.prismals,
 
 	lint.shellcheck,
+	lint.prismals,
 }
 
 null_ls.setup({
