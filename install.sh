@@ -31,8 +31,11 @@ fi
 
 wget https://starship.rs/install.sh -O starship.sh
 chmod +x ./starship.sh
-./starship.sh -f
+sudo sh ./starship.sh -f
 rm ./starship.sh
+
+git config --global user.email "32010211+navaneeth-dev@users.noreply.github.com"
+git config --global user.name "Navaneeth Rao"
 
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
