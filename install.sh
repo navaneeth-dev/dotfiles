@@ -69,6 +69,6 @@ then
   rm nvim.appimage
 fi
 
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+git clone https://github.com/NvChad/starter ~/.config/nvim
 
 stow -v */ --target ~ --adopt
