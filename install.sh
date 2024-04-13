@@ -46,7 +46,7 @@ yes | ~/.fzf/install
 echo "=== INSTALLING TMUX ==="
 if [ ! -f /usr/local/bin/tmux ]
 then
-  wget https://github.com/tmux/tmux/releases/latest/download/tmux-3.3a.tar.gz
+  wget https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz
   # runtime dep
   sudo apt-get install -y libevent ncurses
   # build dep
