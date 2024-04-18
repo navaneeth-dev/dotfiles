@@ -1,5 +1,6 @@
 set -x SHELL /usr/bin/fish
 fish_add_path $HOME/.local/bin
+fish_add_path /opt/nvim-linux64/bin
 
 starship init fish | source
 zoxide init fish | source
