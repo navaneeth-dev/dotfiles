@@ -61,12 +61,9 @@ fi
 echo "=== INSTALLING NEOVIM ==="
 if [ ! -f /usr/bin/nvim ]
 then
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-  chmod u+x nvim.appimage
-  ./nvim.appimage --appimage-extract
-  sudo mv squashfs-root /
-  sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-  rm nvim.appimage
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+  sudo rm -rf /opt/nvim
+  sudo tar -C /opt -xzf nvim-linux64.tar.gz
 fi
 
 git clone https://github.com/NvChad/starter ~/.config/nvim
