@@ -1,8 +1,24 @@
-require "nvchad.options"
+vim.opt.number = true
+vim.opt.relativenumber = true
 
--- add yours here!
+vim.opt.colorcolumn = "80"
 
-local o = vim.o
-o.cursorlineopt ='both' -- to enable cursorline!
-o.relativenumber = true
-o.number = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+vim.opt.smartindent = true
+
+vim.opt.wrap = false
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = false
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.termguicolors = true
+
+vim.opt.updatetime = 500
