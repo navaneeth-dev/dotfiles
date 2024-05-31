@@ -1,0 +1,7 @@
+- name: Setup dev environment with all dotfile configs and packages
+  hosts: localhost
+  connection: local
+  roles:
+    - name: Install common packages
+      become: yes
+      role: common

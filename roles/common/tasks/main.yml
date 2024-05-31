@@ -1,0 +1,33 @@
+- name: Update and upgrade the system
+  include_tasks: "{{ ansible_os_family }}.yml"
+
+- name: Install Zsh
+  ansible.builtin.package:
+    name: zsh
+    state: present
+
+- name: Install Tmux
+  ansible.builtin.package:
+    name: tmux
+    state: present
+
+- name: Install Bat
+  ansible.builtin.package:
+    name: bat
+    state: present
+
+- name: Install Unzip
+  ansible.builtin.package:
+    name: unzip
+    state: present
+
+- name: Install Ripgrep
+  ansible.builtin.package:
+    name: ripgrep
+    state: present
+
+- name: Install Wget
+  ansible.builtin.package:
+    name: wget
+    state: present
+
