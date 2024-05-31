@@ -5,3 +5,4 @@
     - name: Install common packages
       become: yes
       role: common
+    - role: tmux
