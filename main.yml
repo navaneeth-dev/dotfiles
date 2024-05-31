@@ -7,3 +7,4 @@
       role: common
     - role: tmux
     - role: nvim
+    - role: starship

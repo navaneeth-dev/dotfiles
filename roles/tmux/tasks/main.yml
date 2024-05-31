@@ -1,9 +1,9 @@
-- name: Create Tmux directory
+- name: "Config folder"
   ansible.builtin.file:
-    path: ~/.config/tmux/
+    path: "{{ ansible_user_dir }}/.config/tmux"
     state: directory
 
-- name: Copy tmux.conf
+- name: "Copy tmux.conf"
   ansible.builtin.copy:
-    src: tmux.conf
-    dest: ~/.config/tmux/tmux.conf
+    src: "tmux.conf"
+    dest: "{{ ansible_user_dir }}/.config/tmux/tmux.conf"
