@@ -4,5 +4,8 @@ TODO:
 
 - update install.sh to auto install ansible
 - install/test pending dependencies on debian
-- zsh config
+- zoxide role
+- chsh
+- restic for backups
+- auto set git config using ansible-vault
 
