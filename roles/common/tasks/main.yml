@@ -6,6 +6,11 @@
     name: zsh
     state: present
 
+- name: Install Git
+  ansible.builtin.package:
+    name: git
+    state: present
+
 - name: Install Tmux
   ansible.builtin.package:
     name: tmux
