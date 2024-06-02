@@ -8,4 +8,5 @@ TODO:
 - chsh
 - restic for backups
 - auto set git config using ansible-vault
+- sway config
 
