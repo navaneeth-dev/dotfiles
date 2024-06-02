@@ -1,0 +1,6 @@
+- name: "Create zshrc symlink"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/zshrc"
+    dest: "{{ ansible_user_dir }}/.zshrc"
+    state: link
+    force: true

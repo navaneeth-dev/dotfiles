@@ -8,3 +8,4 @@
     - role: tmux
     - role: nvim
     - role: starship
+    - role: fzf
