@@ -9,3 +9,10 @@
   user:
     name: "{{ ansible_user_id }}"
     shell: /usr/bin/fish
+
+- name: "Create symlink to config.fish"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/config.fish"
+    dest: "{{ ansible_user_dir }}/.config/fish/config.fish"
+    state: link
+    force: true
