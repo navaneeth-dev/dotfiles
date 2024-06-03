@@ -9,3 +9,4 @@
     - role: nvim
     - role: starship
     - role: fzf
+    - role: fish
