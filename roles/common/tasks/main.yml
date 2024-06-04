@@ -42,11 +42,10 @@
     path: "{{ ansible_user_dir }}/.local/bin"
     state: directory
 
-- name: "Create symlink to tmux-sessionizer"
+- name: "Copy tmux-sessionizer script to local bin"
   become: false
-  ansible.builtin.file:
+  ansible.builtin.copy:
     src: "{{ role_path }}/files/tmux-sessionizer"
     dest: "{{ ansible_user_dir }}/.local/bin/tmux-sessionizer"
-    state: link
-    mode: 700
+    mode: '700'
 
