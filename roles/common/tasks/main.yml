@@ -36,3 +36,17 @@
     name: wget
     state: present
 
+- name: Make local bin dir
+  become: false
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/.local/bin"
+    state: directory
+
+- name: "Create symlink to tmux-sessionizer"
+  become: false
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/tmux-sessionizer"
+    dest: "{{ ansible_user_dir }}/.local/bin/tmux-sessionizer"
+    state: link
+    mode: 700
+
