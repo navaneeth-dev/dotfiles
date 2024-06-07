@@ -1,4 +1,5 @@
 set PATH $PATH ~/.local/bin
+set PATH $PATH /opt/android-studio/bin
 
 if status is-interactive
     set -e SSH_AGENT_PID
