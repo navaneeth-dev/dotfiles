@@ -2,8 +2,7 @@ set PATH $PATH ~/.local/bin
 set PATH $PATH /opt/android-studio/bin
 
 if status is-interactive
-    set -e SSH_AGENT_PID
-    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    keychain --eval id_rsa ~/.ssh/new_primary_ed25519 | source
 end
 
 bind \c_ 'tmux-sessionizer'
