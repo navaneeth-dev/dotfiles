@@ -1,8 +1,9 @@
 set PATH $PATH ~/.local/bin
 set PATH $PATH /opt/android-studio/bin
 
+set SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 if status is-interactive
-    keychain --eval id_rsa ~/.ssh/new_primary_ed25519 | source
 end
 
 bind \c_ 'tmux-sessionizer'
