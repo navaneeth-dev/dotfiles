@@ -1,4 +1,5 @@
 set PATH $PATH ~/.local/bin
+set PATH $PATH ~/go/bin
 set PATH $PATH /opt/android-studio/bin
 
 set SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
