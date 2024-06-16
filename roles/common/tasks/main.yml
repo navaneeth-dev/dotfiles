@@ -1,39 +1,16 @@
 - name: Update and upgrade the system
   include_tasks: "{{ ansible_os_family }}.yml"
 
-- name: Install Zsh
+- name: Install packages (fish, git, tmux, bat, unzip, ripgrep, wget) 
   ansible.builtin.package:
-    name: zsh
-    state: present
-
-- name: Install Git
-  ansible.builtin.package:
-    name: git
-    state: present
-
-- name: Install Tmux
-  ansible.builtin.package:
-    name: tmux
-    state: present
-
-- name: Install Bat
-  ansible.builtin.package:
-    name: bat
-    state: present
-
-- name: Install Unzip
-  ansible.builtin.package:
-    name: unzip
-    state: present
-
-- name: Install Ripgrep
-  ansible.builtin.package:
-    name: ripgrep
-    state: present
-
-- name: Install Wget
-  ansible.builtin.package:
-    name: wget
+    name:
+      - fish
+      - git
+      - tmux
+      - bat
+      - unzip
+      - ripgrep
+      - wget
     state: present
 
 - name: Make local bin dir
