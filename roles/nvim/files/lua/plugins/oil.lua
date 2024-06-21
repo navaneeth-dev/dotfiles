@@ -3,6 +3,9 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = { "VimEnter */*,.*", "BufNew */*,.*" },
     opts = {
+        view_options = {
+            show_hidden = true,
+        },
         keymaps = {
             ["<C-p>"] = false,
         },
