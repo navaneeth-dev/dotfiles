@@ -11,3 +11,4 @@ bind \c_ 'tmux-sessionizer'
 
 zoxide init fish | source
 fzf --fish | source
+source "$HOME/.cargo/env.fish"
