@@ -30,3 +30,4 @@ vim.opt.termguicolors = true
 
 vim.opt.updatetime = 500
 
+vim.opt.laststatus = 3
