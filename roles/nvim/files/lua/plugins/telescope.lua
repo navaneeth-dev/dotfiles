@@ -12,6 +12,7 @@ return {
 			vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 			vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})
 			vim.keymap.set('n', '<leader>fm', builtin.marks, {})
+			vim.keymap.set('n', '<leader>fk', builtin.keymaps, {})
         end
     },
 }
