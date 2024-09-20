@@ -15,6 +15,8 @@ return {
                 -- You can customize some of the format options for the filetype (:help conform.format)
                 -- rust = { "rustfmt", lsp_format = "fallback" },
                 javascript = { "prettierd", "prettier", stop_after_first = true },
+                html = { "prettierd", "prettier", stop_after_first = true },
+                php = { "pint" },
             },
         })
     end
