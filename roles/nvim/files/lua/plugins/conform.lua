@@ -14,10 +14,11 @@ return {
                 python = { "black" },
                 -- You can customize some of the format options for the filetype (:help conform.format)
                 -- rust = { "rustfmt", lsp_format = "fallback" },
-                javascript = { "prettierd", "prettier", stop_after_first = true },
-                html = { "prettierd", "prettier", stop_after_first = true },
+                javascript = { "prettier", stop_after_first = true },
+                html = { "prettier", stop_after_first = true },
                 php = { "pint" },
-                markdown = { "prettierd" },
+                markdown = { "prettier" },
+                astro = { "prettier" },
             },
         })
     end
